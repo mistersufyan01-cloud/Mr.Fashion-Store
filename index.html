@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>LUXORA — Premium Finds</title>
+<meta name="description" content="LUXORA premium products and global deals.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--bg:#070808;--card:#111313;--card2:#171919;--gold:#d5ae63;--gold2:#f1d391;--white:#f7f1e5;--muted:#a6a198;--line:#302f2b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:"DM Sans",Arial,sans-serif}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}
+.container{width:min(1180px,92%);margin:auto}.top{height:35px;border-bottom:1px solid #252422;color:#bcb8ae;font-size:10px;display:flex;align-items:center}.top .container{display:flex;justify-content:space-between}.top span{margin-right:25px}
+.nav{height:80px;border-bottom:1px solid #252422;background:rgba(7,8,8,.95);position:sticky;top:0;z-index:20;backdrop-filter:blur(14px)}.nav .container{height:100%;display:flex;align-items:center;justify-content:space-between}.logo{font:31px "Playfair Display";letter-spacing:5px;color:var(--gold2)}.logo small{display:block;text-align:center;font:7px "DM Sans";letter-spacing:3px;color:#aaa;margin-top:-4px}.links{display:flex;gap:25px;font-size:12px}.links a:hover{color:var(--gold2)}.search{width:250px;height:38px;border:1px solid #5c4a2b;border-radius:30px;display:flex;overflow:hidden}.search input{flex:1;min-width:0;background:transparent;border:0;color:white;padding:0 14px;outline:none;font-size:11px}.search button{width:43px;border:0;background:linear-gradient(135deg,var(--gold2),var(--gold));cursor:pointer}
+.hero{min-height:510px;position:relative;display:flex;align-items:center;overflow:hidden;background:radial-gradient(circle at 78% 48%,rgba(213,174,99,.27),transparent 28%),linear-gradient(100deg,#090a0a,#12110f 55%,#080909)}.hero:before{content:"";position:absolute;width:600px;height:600px;right:-100px;top:-50px;border-radius:50%;border:1px solid rgba(241,211,145,.12);box-shadow:0 0 0 40px rgba(241,211,145,.025),0 0 0 90px rgba(241,211,145,.02)}.hero-content{position:relative;z-index:2;max-width:620px;padding:70px 0}.eyebrow{font-size:10px;letter-spacing:3px;color:var(--gold);font-weight:700;text-transform:uppercase}.hero h1{font:62px/1.02 "Playfair Display";margin:14px 0}.hero h1 span{color:var(--gold2)}.hero p{max-width:520px;color:#b6b1a7;font-size:13px;line-height:1.7}.btn{display:inline-block;border:0;border-radius:25px;padding:12px 24px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17130b;font-size:11px;font-weight:700;cursor:pointer}.hero-visual{position:absolute;right:7%;font-size:135px;filter:drop-shadow(0 28px 30px #000);transform:rotate(-5deg)}
+.categories{border-block:1px solid var(--line);padding:19px 0;background:#0b0c0c}.catrow{display:flex;gap:15px;justify-content:space-between;overflow:auto}.cat{min-width:95px;text-align:center;color:#d0cbc1;font-size:10px}.cat i{display:block;width:40px;height:40px;line-height:40px;margin:0 auto 7px;border:1px solid #72592d;border-radius:50%;font-style:normal;color:var(--gold2);font-size:16px}
+.section{padding:52px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}.section-head h2{font:35px "Playfair Display";margin:5px 0}.gold{color:var(--gold2);font-size:11px}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.product{background:linear-gradient(145deg,#171919,#0f1010);border:1px solid #30302d;border-radius:13px;overflow:hidden;position:relative;transition:.25s}.product:hover{transform:translateY(-5px);border-color:#776033}.photo{height:220px;background:radial-gradient(circle,rgba(213,174,99,.17),transparent 57%),#181a1a;display:flex;align-items:center;justify-content:center;font-size:75px;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover}.badge{position:absolute;left:10px;top:10px;padding:5px 8px;border-radius:12px;background:var(--gold2);color:#17130b;font-size:8px;font-weight:800}.info{padding:15px}.stars{color:#f1c55c;font-size:11px}.product h3{font:18px "Playfair Display";margin:7px 0}.desc{font-size:10px;line-height:1.5;color:#96938c;min-height:31px}.price{margin:11px 0;font-weight:700}.old{text-decoration:line-through;color:#777;font-size:10px;margin-left:6px;font-weight:400}.buy{width:100%;text-align:center}
+.deal{margin:0 auto 45px;border:1px solid #403522;border-radius:14px;padding:32px;background:radial-gradient(circle at 80% 50%,rgba(213,174,99,.2),transparent 35%),#101111}.deal h2{font:38px "Playfair Display";margin:7px 0}.deal p{font-size:12px;color:#aaa}.features{border-block:1px solid var(--line);padding:26px 0}.feature-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}.feature{font-size:17px;color:var(--gold2)}.feature b{display:block;color:#eee;font-size:11px;margin:7px 0 3px}.feature span{font-size:9px;color:#777}
+.news{padding:45px 0;text-align:center}.news h2{font:31px "Playfair Display"}.news p{font-size:11px;color:#999}.email{max-width:470px;margin:20px auto;display:flex;border:1px solid #54452b;border-radius:25px;overflow:hidden}.email input{flex:1;background:#121313;color:#fff;border:0;outline:0;padding:12px 16px;font-size:11px}.email button{border:0;background:var(--gold2);padding:0 20px;font-weight:700;font-size:11px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:#777;font-size:9px}.foot{display:flex;justify-content:space-between}
+.empty{grid-column:1/-1;text-align:center;border:1px dashed #333;border-radius:12px;padding:55px;color:#777}
+
+/* ADMIN */
+.admin-toggle{position:fixed;right:18px;bottom:18px;z-index:50;border:1px solid #72592d;background:#111;color:var(--gold2);border-radius:50%;width:48px;height:48px;cursor:pointer;box-shadow:0 10px 30px #000}
+.modal{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.78);backdrop-filter:blur(7px);overflow:auto;padding:30px 15px}.modal.show{display:block}.admin{width:min(900px,100%);margin:auto;background:#101212;border:1px solid #3b362c;border-radius:16px;padding:25px;box-shadow:0 25px 70px #000}.admin-head{display:flex;justify-content:space-between;align-items:center}.admin h2{font:30px "Playfair Display";margin:0}.close{background:#191a1a;color:#ddd;border:1px solid #383735;border-radius:50%;width:35px;height:35px;cursor:pointer}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.field label{display:block;font-size:9px;color:#aaa;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;background:#080909;border:1px solid #343431;color:#fff;border-radius:8px;padding:10px;outline:none}.field textarea{min-height:70px;resize:vertical}.full{grid-column:1/-1}.actions{display:flex;gap:9px;margin-top:15px}.secondary{background:#191a1a;color:#eee;border:1px solid #393835}.danger{background:#321919;color:#ffb9b9;border:1px solid #5a3030}.admin-list{margin-top:25px;display:grid;gap:9px}.admin-item{display:flex;align-items:center;gap:12px;padding:10px;border:1px solid #2e2e2b;border-radius:9px;background:#171818}.thumb{width:58px;height:58px;border-radius:7px;background:#222;display:flex;align-items:center;justify-content:center;font-size:25px;overflow:hidden}.thumb img{width:100%;height:100%;object-fit:cover}.grow{flex:1}.muted{font-size:9px;color:#888;margin-top:4px}.admin-item button{padding:8px 12px;border-radius:18px;border:0;cursor:pointer;font-size:10px;background:var(--gold2)}.admin-item .del{background:#321919;color:#ffb9b9;border:1px solid #5a3030}.note{margin-top:15px;color:#777;font-size:9px;line-height:1.6}
+@media(max-width:900px){.links{display:none}.hero-visual{opacity:.25;right:0}.products{grid-template-columns:repeat(2,1fr)}.feature-row{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.top{display:none}.nav{height:68px}.logo{font-size:25px}.search{width:160px}.hero h1{font-size:47px}.hero{min-height:550px}.products{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.admin-item{flex-wrap:wrap}.foot{flex-direction:column;gap:7px}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="container"><div><span>◉ Worldwide Shipping</span><span>◆ Premium Finds</span><span>♜ Global Marketplace</span></div><div>Follow Us:　f　◎　▶　♪</div></div></div>
+
+<nav class="nav"><div class="container">
+<a class="logo" href="#">LUXORA<small>PREMIUM FINDS • GLOBAL DEALS</small></a>
+<div class="links"><a href="#">Home</a><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+<div class="search"><input id="search" placeholder="Search products..."><button>⌕</button></div>
+</div></nav>
+
+<section class="hero"><div class="container hero-content">
+<div class="eyebrow">Exclusive Online Store</div>
+<h1>Premium Products<br><span>Better Life</span></h1>
+<p>Discover trending products, innovative gadgets and lifestyle essentials — carefully selected for modern living.</p>
+<a href="#shop" class="btn">Shop Now　→</a>
+</div><div class="hero-visual">⌚　🎧　📱</div></section>
+
+<div class="categories" id="categories"><div class="container catrow">
+<div class="cat"><i>▣</i>Electronics</div><div class="cat"><i>◆</i>Fashion</div><div class="cat"><i>⌂</i>Home</div><div class="cat"><i>✦</i>Beauty</div><div class="cat"><i>♨</i>Sports</div><div class="cat"><i>◉</i>Gaming</div><div class="cat"><i>◇</i>Travel</div><div class="cat"><i>⚙</i>Tools</div>
+</div></div>
+
+<section class="section" id="shop"><div class="container">
+<div class="section-head"><div><div class="eyebrow">Featured Products</div><h2>Best Picks For You</h2></div><span class="gold">Freshly Updated</span></div>
+<div class="products" id="products"></div>
+</div></section>
+
+<div class="container deal"><div class="eyebrow">Limited Time Offer</div><h2>Up To 70% Off</h2><p>Explore selected products and special marketplace finds.</p><a class="btn" href="#shop">Shop Deals　→</a></div>
+
+<div class="features"><div class="container feature-row">
+<div class="feature">◈<b>Secure Shopping</b><span>Shop with confidence</span></div>
+<div class="feature">✈<b>Global Selection</b><span>Products from global suppliers</span></div>
+<div class="feature">◌<b>24/7 Support</b><span>We're here to help</span></div>
+<div class="feature">↻<b>Easy Returns</b><span>Check seller policy</span></div>
+</div></div>
+
+<section class="news" id="contact"><div class="container"><h2>Join Our Newsletter</h2><p>Get exclusive finds, new arrivals and special offers.</p><form class="email" onsubmit="event.preventDefault();alert('Thank you for subscribing!')"><input type="email" placeholder="Enter your email" required><button>Subscribe</button></form></div></section>
+
+<section class="section" id="about" style="padding-top:0"><div class="container"><div class="deal"><div class="eyebrow">About LUXORA</div><h2>Curated finds for modern living.</h2><p>LUXORA showcases interesting products across technology, lifestyle, home, travel and more. Some product links may be affiliate links.</p></div></div></section>
+
+<footer><div class="container foot"><span>© 2026 LUXORA. All rights reserved.</span><span>Affiliate Disclosure: Some links may earn us a commission at no additional cost to you.</span></div></footer>
+
+<button class="admin-toggle" onclick="openAdmin()" title="Product Manager">⚙</button>
+
+<div class="modal" id="modal"><div class="admin">
+<div class="admin-head"><div><div class="eyebrow">Private Manager</div><h2>Manage Products</h2></div><button class="close" onclick="closeAdmin()">×</button></div>
+<div class="formgrid">
+<div class="field"><label>PRODUCT NAME</label><input id="pName" placeholder="Premium Headphones"></div>
+<div class="field"><label>CATEGORY</label><select id="pCat"><option>Electronics</option><option>Fashion</option><option>Home & Living</option><option>Beauty</option><option>Sports</option><option>Gaming</option><option>Travel</option><option>Tools</option></select></div>
+<div class="field"><label>PRICE</label><input id="pPrice" placeholder="19.99"></div>
+<div class="field"><label>OLD PRICE</label><input id="pOld" placeholder="39.99"></div>
+<div class="field"><label>RATING</label><input id="pRating" value="4.8"></div>
+<div class="field"><label>BADGE</label><select id="pBadge"><option>NEW</option><option>HOT</option><option>SALE</option></select></div>
+<div class="field"><label>EMOJI (if no image)</label><input id="pEmoji" value="✨"></div>
+<div class="field"><label>IMAGE URL</label><input id="pImage" placeholder="https://example.com/product.jpg"></div>
+<div class="field full"><label>DESCRIPTION</label><textarea id="pDesc" placeholder="Short premium product description"></textarea></div>
+<div class="field full"><label>ALIBABA AFFILIATE / PRODUCT LINK</label><input id="pLink" placeholder="Paste your Alibaba affiliate link"></div>
+</div>
+<div class="actions"><button class="btn" onclick="saveProduct()">Save Product</button><button class="btn secondary" onclick="clearForm()">Clear</button></div>
+<div class="note">Products are saved in this browser using localStorage. This single-file version does not upload data to a server. For shared products across every device, a database/backend is required.</div>
+<div class="admin-list" id="adminList"></div>
+</div></div>
+
+<script>
+const defaultProducts=[
+{name:"Wireless Earbuds",category:"Electronics",price:"12.99",old:"26.99",rating:"4.8",badge:"HOT",emoji:"🎧",image:"",desc:"Compact wireless audio for everyday listening.",link:"https://www.alibaba.com/"},
+{name:"Smart Watch",category:"Electronics",price:"18.99",old:"39.99",rating:"4.7",badge:"NEW",emoji:"⌚",image:"",desc:"Modern smartwatch with a sleek everyday design.",link:"https://www.alibaba.com/"},
+{name:"Travel Backpack",category:"Travel",price:"24.99",old:"49.99",rating:"4.8",badge:"HOT",emoji:"🎒",image:"",desc:"Functional carry for work, travel and daily use.",link:"https://www.alibaba.com/"},
+{name:"LED Desk Lamp",category:"Home & Living",price:"14.99",old:"29.99",rating:"4.6",badge:"NEW",emoji:"💡",image:"",desc:"Minimal lighting for a stylish workspace.",link:"https://www.alibaba.com/"},
+{name:"Air Fryer",category:"Home & Living",price:"36.99",old:"79.99",rating:"4.8",badge:"HOT",emoji:"🍳",image:"",desc:"A practical kitchen upgrade for everyday cooking.",link:"https://www.alibaba.com/"},
+{name:"Wireless Charger",category:"Electronics",price:"8.99",old:"18.99",rating:"4.6",badge:"NEW",emoji:"📱",image:"",desc:"Clean, convenient charging for compatible devices.",link:"https://www.alibaba.com/"}
+];
+
+function getProducts(){
+ try{
+  const x=JSON.parse(localStorage.getItem("LUXORA_PRODUCTS"));
+  return Array.isArray(x)?x:defaultProducts;
+ }catch{return defaultProducts}
+}
+function setProducts(x){localStorage.setItem("LUXORA_PRODUCTS",JSON.stringify(x));}
+if(!localStorage.getItem("LUXORA_PRODUCTS"))setProducts(defaultProducts);
+
+function esc(v){
+ return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+}
+function safeUrl(v){
+ try{const u=new URL(v);return /^https?:$/.test(u.protocol)?u.href:"#";}catch{return "#";}
+}
+
+function render(){
+ const q=(document.getElementById("search").value||"").toLowerCase().trim();
+ const products=getProducts().filter(p=>
+  `${p.name} ${p.category} ${p.desc}`.toLowerCase().includes(q)
+ );
+ const box=document.getElementById("products");
+ if(!products.length){box.innerHTML='<div class="empty">No products found.</div>';return;}
+ box.innerHTML=products.map(p=>`
+ <article class="product">
+  <span class="badge">${esc(p.badge||"NEW")}</span>
+  <div class="photo">${p.image?`<img src="${esc(p.image)}" alt="${esc(p.name)}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span style="display:none">${esc(p.emoji||"✨")}</span>`:`<span>${esc(p.emoji||"✨")}</span>`}</div>
+  <div class="info">
+   <div class="stars">★★★★★ <span style="color:#888">${esc(p.rating||"4.8")}</span></div>
+   <h3>${esc(p.name)}</h3>
+   <div class="desc">${esc(p.desc||"Premium selected product.")}</div>
+   <div class="price">$${esc(p.price)} ${p.old?`<span class="old">$${esc(p.old)}</span>`:""}</div>
+   <a class="btn buy" href="${safeUrl(p.link)}" target="_blank" rel="noopener sponsored">Shop Now　→</a>
+  </div>
+ </article>`).join("");
+}
+
+function openAdmin(){
+ document.getElementById("modal").classList.add("show");
+ renderAdmin();
+}
+function closeAdmin(){document.getElementById("modal").classList.remove("show");}
+function clearForm(){
+ ["pName","pPrice","pOld","pRating","pEmoji","pImage","pDesc","pLink"].forEach(id=>document.getElementById(id).value="");
+ document.getElementById("pRating").value="4.8";
+ document.getElementById("pEmoji").value="✨";
+ document.getElementById("pBadge").value="NEW";
+ document.getElementById("pCat").value="Electronics";
+ delete window.editingIndex;
+}
+function saveProduct(){
+ const p={
+  name:document.getElementById("pName").value.trim(),
+  category:document.getElementById("pCat").value,
+  price:document.getElementById("pPrice").value.trim(),
+  old:document.getElementById("pOld").value.trim(),
+  rating:document.getElementById("pRating").value.trim()||"4.8",
+  badge:document.getElementById("pBadge").value,
+  emoji:document.getElementById("pEmoji").value.trim()||"✨",
+  image:document.getElementById("pImage").value.trim(),
+  desc:document.getElementById("pDesc").value.trim(),
+  link:document.getElementById("pLink").value.trim()
+ };
+ if(!p.name||!p.price||!p.link){alert("Product Name, Price and Alibaba Affiliate Link are required.");return;}
+ if(!/^https?:\/\//i.test(p.link)){alert("Please paste a valid http:// or https:// affiliate link.");return;}
+ const a=getProducts();
+ if(Number.isInteger(window.editingIndex)){a[window.editingIndex]=p;}else{a.unshift(p);}
+ setProducts(a);clearForm();render();renderAdmin();alert("Product saved successfully!");
+}
+function editProduct(i){
+ const p=getProducts()[i];if(!p)return;
+ document.getElementById("pName").value=p.name||"";
+ document.getElementById("pCat").value=p.category||"Electronics";
+ document.getElementById("pPrice").value=p.price||"";
+ document.getElementById("pOld").value=p.old||"";
+ document.getElementById("pRating").value=p.rating||"4.8";
+ document.getElementById("pBadge").value=p.badge||"NEW";
+ document.getElementById("pEmoji").value=p.emoji||"✨";
+ document.getElementById("pImage").value=p.image||"";
+ document.getElementById("pDesc").value=p.desc||"";
+ document.getElementById("pLink").value=p.link||"";
+ window.editingIndex=i;
+ document.querySelector(".admin").scrollIntoView({behavior:"smooth"});
+}
+function deleteProduct(i){
+ if(!confirm("Delete this product?"))return;
+ const a=getProducts();a.splice(i,1);setProducts(a);render();renderAdmin();
+}
+function renderAdmin(){
+ const a=getProducts(), box=document.getElementById("adminList");
+ box.innerHTML=a.map((p,i)=>`
+ <div class="admin-item">
+  <div class="thumb">${p.image?`<img src="${esc(p.image)}" alt="">`:esc(p.emoji||"✨")}</div>
+  <div class="grow"><b>${esc(p.name)}</b><div class="muted">${esc(p.category)} • $${esc(p.price)} • ${esc(p.badge||"NEW")}</div></div>
+  <button onclick="editProduct(${i})">Edit</button>
+  <button class="del" onclick="deleteProduct(${i})">Delete</button>
+ </div>`).join("");
+}
+document.getElementById("search").addEventListener("input",render);
+document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")closeAdmin();});
+render();
+</script>
+</body>
+</html>
